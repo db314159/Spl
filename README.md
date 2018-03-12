@@ -67,12 +67,6 @@ Or, if you would like, you can run
     $ gcc [Output File] -lm
     $ ./a.out
     
-Note for Ubuntu/Mint Linux users: for the gcc step, you'll need to add -lbsd to your gcc command:
-
-    $ gcc [Output File] -lm -lbsd
-    
-Not sure why that's needed, but if it's not there you'll get an error from the use of strlcat in generating error messages.
-
 The spl script should work in any bash terminal, on Windows, the explicit python method should work if you have
 all of the right programs installed. I may at some time get around to writing a .bat script for Windows users.
 
