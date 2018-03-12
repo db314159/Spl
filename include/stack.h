@@ -24,11 +24,11 @@ void push(CHARACTER *s, int num)
        
        if (ptr == NULL)
        {
-           char errormessage[MAXNAMELENGTH+500];
+           /*char errormessage[MAXNAMELENGTH+500];
            strcpy(errormessage, "Error: ");
            strlcat(errormessage, (*s).name, MAXNAMELENGTH);
            strcat(errormessage, " knows too much!\n");
-           printf(errormessage);
+           printf(errormessage);*/
            return;
        }
        (*s).stk = ptr;
@@ -43,13 +43,13 @@ void pop(CHARACTER *s)
 {
     if ((*s).top <= -1)
     {
-       char errormessage[MAXNAMELENGTH+50];
+       /*char errormessage[MAXNAMELENGTH+50];
        strcpy(errormessage, "Error: ");
        strlcat(errormessage, (*s).name, MAXNAMELENGTH);
        strcat(errormessage, " knows nothing!\n");
        printf (errormessage);
        printf("Length: ");
-       printf("%li\n",(*s).top);
+       printf("%li\n",(*s).top);*/
        return;
     }
     else
