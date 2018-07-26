@@ -559,6 +559,9 @@ while N < len(src):
                     if actor != name:
                         target = actor
                         speaker = name
+                if len(stage) == 1:
+                    target = name   #what, people can't talk to themselves? :)
+                    speaker = name
                 N += 1
                 statements = getStatements()
                 scenecode = ""
