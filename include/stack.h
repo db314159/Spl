@@ -8,7 +8,7 @@ struct character
    int* stk;
    long stksize;
    long top;
-   int value;
+   long long int value;
    char name[MAXNAMELENGTH];
 };
 typedef struct character CHARACTER;

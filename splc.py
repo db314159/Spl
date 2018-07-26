@@ -336,13 +336,13 @@ def parseStatement(stat):
         return target + ".top = -1 ;\n"
     elif trimmed == "openyourheart" or trimmed == "openthyheart":
         #numerical output
-        return 'fprintf(stdout, "%d", ' + target + '.value);\n'
+        return 'fprintf(stdout, "%lli", ' + target + '.value);\n'
     elif trimmed == "speakyourmind" or trimmed == "speakthymind":
         #character output
         return 'fprintf(stdout, "%c", (char)(' + target + '.value));\n'
     elif trimmed == "listentoyourheart" or trimmed == "listentothyheart":
         #numerical input
-        return 'fgets(inputbuffer, BUFSIZ, stdin);\nsscanf(inputbuffer, "%d", &(' + target + '.value));\n' #" = getchar() - '0';\n"
+        return 'fgets(inputbuffer, BUFSIZ, stdin);\nsscanf(inputbuffer, "%lli", &(' + target + '.value));\n' #" = getchar() - '0';\n"
     elif trimmed == "openyourmind" or trimmed == "openyourmind":
         #character input
         return target + ".value = getchar();\n"
