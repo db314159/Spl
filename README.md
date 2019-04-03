@@ -16,10 +16,6 @@ copyright notice to any work that utilizes this project.
 This compiler implements most features of the Shakespeare Programming language described at
 http://shakespearelang.sourceforge.net/report/shakespeare/
 
-The following features have yet to be or may never be implemented:
-
-- multiple-word nouns in cases where using just the last word would generate any confusion
-
 The following features not in the original language spec is implemented but is a work in progress:
 
 ### Pretty Gotos
@@ -66,6 +62,20 @@ Or, if you would like, you can run
     $ python splc.py [Input File] > [Output File]
     $ gcc [Output File] -lm
     $ ./a.out
+    
+This version also includes an interpreter that converts to Python instead of to C. It can use used as follows:
+
+    $ python python/splpy.py [Input File] > python/[Output File].py
+    $ python python/[Output File].py
+    
+ e.g.:
+
+    $ python python/splpy.py examples/floatingpoint.spl > floatingpoint.py
+    $ python python/floatingpoint.py
+    
+If you're feeling adventurous you can comment out the print statement at the very end of splpy.py and uncomment the exec statement, which allows you to skip the second step above, so you'd run it as:
+
+    $ python python/splpy.py [Input File]
     
 The spl script should work in any bash terminal, on Windows, the explicit python method should work if you have
 all of the right programs installed. I may at some time get around to writing a .bat script for Windows users.
