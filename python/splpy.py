@@ -229,7 +229,7 @@ def wordToOperator(op):
     elif op == "difference":
         return "-"
     elif op == "quotient":
-        return "/"
+        return "//"
     elif op == "product":
         return "*"
     else:
